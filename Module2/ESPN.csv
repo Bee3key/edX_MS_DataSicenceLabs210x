@@ -1,0 +1,99 @@
+"     0                       1     2    3    4    5    6    7    8      9   \
+0   NaN                      PP    SH  NaN  NaN  NaN  NaN  NaN  NaN    NaN   
+1    RK                  PLAYER  TEAM   GP    G    A  PTS  +/-  PIM  PTS/G   
+2     1          Jamie Benn, LW   DAL   82   35   52   87    1   64   1.06   
+3     2         John Tavares, C   NYI   82   38   48   86    5   46   1.05   
+4     3        Sidney Crosby, C   PIT   77   28   56   84    5   47   1.09   
+5     4       Alex Ovechkin, LW   WSH   81   53   28   81   10   58   1.00   
+6   NaN       Jakub Voracek, RW   PHI   82   22   59   81    1   78   0.99   
+7     6    Nicklas Backstrom, C   WSH   82   18   60   78    5   40   0.95   
+8     7         Tyler Seguin, C   DAL   71   37   40   77   -1   20   1.08   
+9     8         Jiri Hudler, LW   CGY   78   31   45   76   17   14   0.97   
+10  NaN        Daniel Sedin, LW   VAN   82   20   56   76    5   18   0.93   
+11   10  Vladimir Tarasenko, RW   STL   77   37   36   73   27   31   0.95   
+12  NaN                      PP    SH  NaN  NaN  NaN  NaN  NaN  NaN    NaN   
+13   RK                  PLAYER  TEAM   GP    G    A  PTS  +/-  PIM  PTS/G   
+14  NaN        Nick Foligno, LW   CBJ   79   31   42   73   16   50   0.92   
+15  NaN        Claude Giroux, C   PHI   81   25   48   73   -3   36   0.90   
+16  NaN         Henrik Sedin, C   VAN   82   18   55   73   11   22   0.89   
+17   14       Steven Stamkos, C    TB   82   43   29   72    2   49   0.88   
+18  NaN        Tyler Johnson, C    TB   77   29   43   72   33   24   0.94   
+19   16        Ryan Johansen, C   CBJ   82   26   45   71   -6   40   0.87   
+20   17         Joe Pavelski, C    SJ   82   37   33   70   12   29   0.85   
+21  NaN        Evgeni Malkin, C   PIT   69   28   42   70   -2   60   1.01   
+22  NaN         Ryan Getzlaf, C   ANA   77   25   45   70   15   62   0.91   
+23   20           Rick Nash, LW   NYR   79   42   27   69   29   36   0.87   
+24  NaN                      PP    SH  NaN  NaN  NaN  NaN  NaN  NaN    NaN   
+25   RK                  PLAYER  TEAM   GP    G    A  PTS  +/-  PIM  PTS/G   
+26   21      Max Pacioretty, LW   MTL   80   37   30   67   38   32   0.84   
+27  NaN        Logan Couture, C    SJ   82   27   40   67   -6   12   0.82   
+28   23       Jonathan Toews, C   CHI   81   28   38   66   30   36   0.81   
+29  NaN        Erik Karlsson, D   OTT   82   21   45   66    7   42   0.80   
+30  NaN   Henrik Zetterberg, LW   DET   77   17   49   66   -6   32   0.86   
+31   26        Pavel Datsyuk, C   DET   63   26   39   65   12    8   1.03   
+32  NaN         Joe Thornton, C    SJ   78   16   49   65   -4   30   0.83   
+33   28     Nikita Kucherov, RW    TB   82   28   36   64   38   37   0.78   
+34  NaN        Patrick Kane, RW   CHI   61   27   37   64   10   10   1.05   
+35  NaN          Mark Stone, RW   OTT   80   26   38   64   21   14   0.80   
+36  NaN                      PP    SH  NaN  NaN  NaN  NaN  NaN  NaN    NaN   
+37   RK                  PLAYER  TEAM   GP    G    A  PTS  +/-  PIM  PTS/G   
+38  NaN     Alexander Steen, LW   STL   74   24   40   64    8   33   0.86   
+39  NaN          Kyle Turris, C   OTT   82   24   40   64    5   36   0.78   
+40  NaN     Johnny Gaudreau, LW   CGY   80   24   40   64   11   14   0.80   
+41  NaN         Anze Kopitar, C    LA   79   16   48   64   -2   10   0.81   
+42   35        Radim Vrbata, RW   VAN   79   31   32   63    6   20   0.80   
+43  NaN      Jaden Schwartz, LW   STL   75   28   35   63   13   16   0.84   
+44  NaN       Filip Forsberg, C   NSH   82   26   37   63   15   24   0.77   
+45  NaN       Jordan Eberle, RW   EDM   81   24   39   63  -16   24   0.78   
+46  NaN        Ondrej Palat, LW    TB   75   16   47   63   31   24   0.84   
+47   40         Zach Parise, LW   MIN   74   33   29   62   21   41   0.84   
+
+     10    11   12   13   14   15   16  
+0   NaN   NaN  NaN  NaN  NaN  NaN  NaN  
+1   SOG   PCT  GWG    G    A    G    A  
+2   253  13.8    6   10   13    2    3  
+3   278  13.7    8   13   18    0    1  
+4   237  11.8    3   10   21    0    0  
+5   395  13.4   11   25    9    0    0  
+6   221  10.0    3   11   22    0    0  
+7   153  11.8    3    3   30    0    0  
+8   280  13.2    5   13   16    0    0  
+9   158  19.6    5    6   10    0    0  
+10  226   8.9    5    4   21    0    0  
+11  264  14.0    6    8   10    0    0  
+12  NaN   NaN  NaN  NaN  NaN  NaN  NaN  
+13  SOG   PCT  GWG    G    A    G    A  
+14  182  17.0    3   11   15    0    0  
+15  279   9.0    4   14   23    0    0  
+16  101  17.8    0    5   20    0    0  
+17  268  16.0    6   13   12    0    0  
+18  203  14.3    6    8    9    0    0  
+19  202  12.9    0    7   19    2    0  
+20  261  14.2    5   19   12    0    0  
+21  212  13.2    4    9   17    0    0  
+22  191  13.1    6    3   10    0    2  
+23  304  13.8    8    6    6    4    1  
+24  NaN   NaN  NaN  NaN  NaN  NaN  NaN  
+25  SOG   PCT  GWG    G    A    G    A  
+26  302  12.3   10    7    4    3    2  
+27  263  10.3    4    6   18    2    0  
+28  192  14.6    7    6   11    2    1  
+29  292   7.2    3    6   24    0    0  
+30  227   7.5    3    4   24    0    0  
+31  165  15.8    5    8   16    0    0  
+32  131  12.2    0    4   18    0    0  
+33  190  14.7    2    2   13    0    0  
+34  186  14.5    5    6   16    0    0  
+35  157  16.6    6    5    8    1    0  
+36  NaN   NaN  NaN  NaN  NaN  NaN  NaN  
+37  SOG   PCT  GWG    G    A    G    A  
+38  223  10.8    5    8   16    0    0  
+39  215  11.2    6    4   12    1    0  
+40  167  14.4    4    8   13    0    0  
+41  134  11.9    4    6   18    0    0  
+42  267  11.6    7   12   11    0    0  
+43  184  15.2    4    8    8    0    2  
+44  237  11.0    6    6   13    0    0  
+45  183  13.1    2    6   15    0    0  
+46  139  11.5    5    3    8    1    1  
+47  259  12.7    3   11    5    0    0  "
