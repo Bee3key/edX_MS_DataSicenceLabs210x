@@ -3,13 +3,15 @@ import matplotlib.pyplot as plt
 import matplotlib
 import assignment2_helper as helper
 
+from sklearn.decomposition import PCA
+
 # Look pretty...
 # matplotlib.style.use('ggplot')
 plt.style.use('ggplot')
 
 
 # Do * NOT * alter this line, until instructed!
-scaleFeatures = False
+scaleFeatures = True  # False
 
 
 # TODO: Load up the dataset and remove any and all
@@ -20,6 +22,11 @@ scaleFeatures = False
 # feature?
 #
 # .. your code here ..
+
+df = pd.read_csv("Datasets/kidney_disease.csv", sep=',', index_col=0)
+
+df.dropna(axis=0, how='any', inplace=True)
+
 
 
 
@@ -33,7 +40,7 @@ labels = ['red' if i=='ckd' else 'green' for i in df.classification]
 #       ['bgr','wc','rc']
 #
 # .. your code here ..
-
+df = df[['bgr', 'wc', 'rc']]
 
 
 # TODO: Print out and check your dataframe's dtypes. You'll might
@@ -48,6 +55,9 @@ labels = ['red' if i=='ckd' else 'green' for i in df.classification]
 # an appropriate command to coerce these features into the right type.
 #
 # .. your code here ..
+df.bgr = pd.to_numeric(df.bgr)
+df.wc = pd.to_numeric(df.wc)
+df.rc = pd.to_numeric(df.rc)
 
 
 
@@ -61,6 +71,9 @@ labels = ['red' if i=='ckd' else 'green' for i in df.classification]
 # you probably didn't complete the previous step properly.
 #
 # .. your code here ..
+print "Table: \n", df
+print "Variance: \n", df.var()
+print "Describe: \n", df.describe()
 
 
 
@@ -69,7 +82,8 @@ labels = ['red' if i=='ckd' else 'green' for i in df.classification]
 # just yet though!
 #
 # .. your code adjustment here ..
-if scaleFeatures: df = helper.scaleFeatures(df)
+if scaleFeatures:
+    df = helper.scaleFeatures(df)
 
 
 
@@ -79,6 +93,9 @@ if scaleFeatures: df = helper.scaleFeatures(df)
 #
 # .. your code here ..
 
+pca = PCA(n_components=2)
+pca.fit(df)
+T = pca.transform(df)
 
 # Plot the transformed data as a scatter plot. Recall that transforming
 # the data will result in a NumPy NDArray. You can either use MatPlotLib
@@ -90,6 +107,7 @@ if scaleFeatures: df = helper.scaleFeatures(df)
 #
 # Since we transformed via PCA, we no longer have column names. We know we
 # are in P.C. space, so we'll just define the coordinates accordingly:
+
 ax = helper.drawVectors(T, pca.components_, df.columns.values, plt, scaleFeatures)
 T = pd.DataFrame(T)
 T.columns = ['component1', 'component2']
