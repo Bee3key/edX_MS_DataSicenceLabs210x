@@ -5,6 +5,7 @@ import datetime
 
 from mpl_toolkits.mplot3d import Axes3D
 from plyfile import PlyData, PlyElement
+from sklearn.decomposition import PCA, RandomizedPCA
 
 
 # Every 100 data samples, we save 1. If things run too
@@ -14,15 +15,15 @@ reduce_factor = 100
 
 
 # Look pretty...
-matplotlib.style.use('ggplot')
+plt.style.use('ggplot')
 
 
 # Load up the scanned armadillo
 plyfile = PlyData.read('Datasets/stanford_armadillo.ply')
 armadillo = pd.DataFrame({
-  'x':plyfile['vertex']['z'][::reduce_factor],
-  'y':plyfile['vertex']['x'][::reduce_factor],
-  'z':plyfile['vertex']['y'][::reduce_factor]
+    'x': plyfile['vertex']['z'][::reduce_factor],
+    'y': plyfile['vertex']['x'][::reduce_factor],
+    'z': plyfile['vertex']['y'][::reduce_factor]
 })
 
 
@@ -40,7 +41,9 @@ def do_PCA(armadillo):
   #
   # .. your code here ..
 
-  return None
+    pca = PCA(n_components=2)
+    pca.fit(armadillo)
+    return pca.transform(armadillo)
 
 
 def do_RandomizedPCA(armadillo):
@@ -66,8 +69,10 @@ def do_RandomizedPCA(armadillo):
   # Deprecated Method: http://scikit-learn.org/stable/modules/generated/sklearn.decomposition.RandomizedPCA.html
   #
   # .. your code here ..
+    pca = PCA(n_components=2, svd_solver='randomized')
+    pca.fit(armadillo)
 
-  return None
+    return pca.transform(armadillo)
 
 
 
@@ -86,21 +91,24 @@ ax.scatter(armadillo.x, armadillo.y, armadillo.z, c='green', marker='.', alpha=0
 # PCA is ran 5000x in order to help decrease the potential of rogue
 # processes altering the speed of execution.
 t1 = datetime.datetime.now()
-for i in range(5000): pca = do_PCA(armadillo)
+for i in range(5000):
+    pca = do_PCA(armadillo)
 time_delta = datetime.datetime.now() - t1
 
 # Render the newly transformed PCA armadillo!
 if not pca is None:
-  fig = plt.figure()
-  ax = fig.add_subplot(111)
-  ax.set_title('PCA, build time: ' + str(time_delta))
-  ax.scatter(pca[:,0], pca[:,1], c='blue', marker='.', alpha=0.75)
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    ax.set_title('PCA, build time: ' + str(time_delta))
+    ax.scatter(pca[:, 0], pca[:, 1], c='blue', marker='.', alpha=0.75)
 
 
 
 # Time the execution of rPCA 5000x
 t1 = datetime.datetime.now()
-for i in range(5000): rpca = do_RandomizedPCA(armadillo)
+for i in range(5000):
+    rpca = do_RandomizedPCA(armadillo)
+
 time_delta = datetime.datetime.now() - t1
 
 # Render the newly transformed RandomizedPCA armadillo!
