@@ -54,7 +54,8 @@ for png_file in os.listdir(img_folder32i):
     img = misc.imread(path_tmp).reshape(-1)
     vanilla_samples.append(img)
 
-colors = ['b']*72 + ['r']*12
+colors = ['b']*72 + ['r']*12  # These magic numbers are 72 files in img_folder32 and 12 files in img_folder32i
+
 #
 # TODO: Convert the list to a dataframe
 #
