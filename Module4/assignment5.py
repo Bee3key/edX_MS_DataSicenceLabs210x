@@ -14,7 +14,8 @@ plt.style.use('ggplot')
 # TODO: Start by creating a regular old, plain, "vanilla"
 # python list. You can call it 'samples'.
 #
-# .. your code here .. 
+# .. your code here ..
+vanilla_list = [i]
 
 #
 # TODO: Write a for-loop that iterates over the images in the
